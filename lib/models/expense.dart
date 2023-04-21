@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
@@ -32,7 +30,7 @@ class Expense {
   final DateTime date;
   final Category category;
 
-  String get FormattedDate {
+  String get formattedDate {
     return formatter.format(date);
   }
 }
@@ -57,7 +55,6 @@ class ExpenseBucket {
     for (final expense in expenses) {
       /* sum = sum + expense.amount; */
       sum += expense.amount;
-      return sum;
     }
 
     return sum;
